@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import axios from 'axios';
 import { QuizContext } from './QuizContext';
 import { useNavigate } from 'react-router-dom';
+import './Quizzes.css';
 
 const Quizzes = () => {
   const { quizzes, setQuizzes, setCurrentQuiz, setCurrentQuestionIndex, setScore } = useContext(QuizContext);
@@ -45,7 +46,7 @@ const Quizzes = () => {
   };
 
   return (
-    <div>
+    <div id='QuizzesDiv'>
       <h1>Existing Quizzes</h1>
       {quizzes.map(quiz => (
         <div key={quiz.quiz_id}>
