@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
-import './CreateQuiz.css';
 
 const CreateQuiz = () => {
   const [title, setTitle] = useState('');
@@ -142,7 +141,7 @@ const CreateQuiz = () => {
   };
 
   return (
-    <div id='CreateQuizDiv'>
+    <div>
       <h1>{quizId ? 'Edit Quiz' : 'Create Quiz'}</h1>
       <div>
         <label>Title</label>
