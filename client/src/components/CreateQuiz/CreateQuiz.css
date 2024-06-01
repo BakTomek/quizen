@@ -4,4 +4,146 @@
     padding: 15px;
     overflow-y: scroll;
     background-color: #E9EFF2;
+    display: flex;
+    justify-content: safe center;
+    align-items: safe center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 300;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1%;
+    color: #02090D;
+}
+
+#CreateQuizDiv h1{
+    margin-bottom: 54px;
+    color: #1B4863;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1%;
+}
+
+#titleInput{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 0px;
+    width: 300px;
+    border-bottom: 2px solid #537E99;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#titleInput:focus{
+    border-bottom: 2px solid #E6CC65;
+    outline: none;
+}
+
+#titleLabel{
+    padding-bottom: 5px;
+    border-bottom: 2px solid #537E99;
+    font-weight: 700;
+}
+
+.fillerBottom{
+    width: 80%;
+    height: 200px;
+    color: #E9EFF2;
+}
+
+#descArea{
+    margin-top: 18px;
+    background-color: transparent;
+    border: 2px solid #537E99;
+    border-radius: 8px;
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1%;
+    max-width: 400px;
+    max-height: 200px;
+    min-height: 150px;
+    min-width: 250px;
+    text-align: center;
+    margin-bottom: 54px;
+}
+
+#descArea:focus{
+    border: 2px solid #E6CC65;
+    outline: none;
+}
+
+.QuestionLabel{
+    padding-bottom: 5px;
+    border-bottom: 2px solid #537E99;
+    font-weight: 700;
+}
+
+.QuestionInput{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 0px;
+    width: 500px;
+    border-bottom: 2px solid #537E99;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 36px;
+}
+
+.QuestionInput:focus{
+    border-bottom: 2px solid #E6CC65;
+    outline: none;
+}
+
+.AnswersDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.EditingQuestionDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 18px;
+    margin-bottom: 54px;
+}
+
+.AddQuestionButton{
+    margin-top: 18px;
+}
+
+.CreateQuizButton{
+    margin-top: 54px;
+}
+
+.AnswerLabel{
+    font-weight: 500;
+}
+
+.AnswerInput{
+    background: transparent;
+    padding: 5px;
+    border-radius: 8px;
+    width: 300px;
+    border: 2px solid #537E99;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 18px;
+    margin-left: 3px;
+}
+
+.AnswerInput:focus{
+    border: 2px solid #E6CC65;
+    outline: none;
 }

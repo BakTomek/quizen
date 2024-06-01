@@ -18,12 +18,12 @@ nav{
     line-height: 34px;
     letter-spacing: -1%;
     text-align: left;
-
+    min-height: 190px;
 }
 
 .top li:first-of-type{
     font-size: 50px;
-    line-height: 48px;
+    line-height: 60px;
     letter-spacing: -1%;
     text-align: left;
     color: #1B4863;
@@ -50,9 +50,10 @@ nav{
 }
 
 .middle{
-    height: 20%;
+    height: 25%;
     border-top: 2px solid #537E99;
     list-style: none;
+    min-height: 190px;
 }
 
 .middle li:first-of-type, .middle li:nth-of-type(4){
@@ -71,7 +72,7 @@ nav{
 }
 
 .bottom{
-    height: 55%;
+    height: 50%;
     border-top: 2px solid #537E99;
     list-style: none;
 }

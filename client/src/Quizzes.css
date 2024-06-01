@@ -4,4 +4,107 @@
     padding: 15px;
     overflow-y: scroll;
     background-color: #E9EFF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#QuizzesDiv h1{
+    padding-top: 120px;
+    color: #1B4863;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1%;
+    margin-bottom: 0;
+}   
+
+#BigQuizDiv{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quizDivGuess{
+    background-color: #537E99;
+    border-radius: 8px;
+    padding: 28px;
+    margin: 32px 16px 32px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    max-height: 250px;
+    max-width: 500px;
+    -webkit-box-shadow: 0px 8px 14px -8px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 8px 14px -8px rgba(66, 68, 90, 1);
+    box-shadow: 0px 8px 14px -8px rgba(66, 68, 90, 1);
+}
+
+.quizDivGuess h2{
+    margin: 0;
+    color: #E9EFF2;
+    margin-bottom: 0;
+    font-size: 26px;
+}
+
+.ButtonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.ButtonDiv button{
+    background-color: #E6CC65;
+    border: none;
+    width: 70px;
+    height: 30px;
+    color: #E9EFF2;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px outset #E6CC65;
+}
+
+.ButtonDiv button:hover{
+    background-color: #b19d50;
+    transition: .2s;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px inset #b19d50;
+    color: #c4c8ca;
+    padding-left: 9px;
+    padding-top: 4px;
+}
+
+.Desc{
+    text-wrap: wrap;
+    text-align: center;
+    color: #E9EFF2;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 200;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1%;
+}
+
+.fillerBottom{
+    width: 80%;
+    height: 5%;
+}
+
+#subtitle{
+    font-size: 18px;
+    color: #02090D;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }

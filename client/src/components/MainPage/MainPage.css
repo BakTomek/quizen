@@ -4,12 +4,60 @@
     padding: 15px;
     overflow-y: scroll;
     background-color: #E9EFF2;
+    display: flex;
+    justify-content: safe center;
+    align-items: safe center;
+    flex-direction: column;
 }
 
-#test{
-    font-size: 30px;
-    font-weight: 600;
+#MainPageDiv h1{
     color: #1B4863;
-    /*background-color: #DDE7ED;*/
-    background-color: #E9EFF2;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1%;
+    margin-bottom: 72px;
+}
+
+#Arrow{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#ArrowDiv{
+    width: 90%;
+    max-height: 1500px;
+    color: #E6CC65;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: -1%;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#ArrowDiv p{
+    padding-left: 100px;
+}
+
+.fill{
+    width: 450px;
+    height: 300px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #02090D;
+}
+
+#hat{
+    max-width: 32px;
+    max-height: 32px;
+    margin-right: 10px;
+}
+
+#BottomFill{
+    height: 500px;
+    width: 80%;
 }
