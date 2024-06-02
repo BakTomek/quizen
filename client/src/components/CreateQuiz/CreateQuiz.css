@@ -51,7 +51,8 @@
 .fillerBottom{
     width: 80%;
     height: 200px;
-    color: #E9EFF2;
+    /*color: #E9EFF2;*/
+    color: transparent;
 }
 
 #descArea{
@@ -121,10 +122,52 @@
 
 .AddQuestionButton{
     margin-top: 18px;
+    background-color: #537E99;
+    border: none;
+    width: 150px;
+    height: 70px;
+    color: #E9EFF2;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px outset #537E99;
+    padding: 5px;
+}
+
+.AddQuestionButton:hover{
+    background-color: #1B4863;
+    transition: .2s;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px inset #1B4863;
+    color: #c4c8ca;
+    padding-left: 9px;
+    padding-top: 4px;
 }
 
 .CreateQuizButton{
-    margin-top: 54px;
+    margin-top: 72px;
+    background-color: #E6CC65;
+    border: none;
+    width: 100px;
+    height: 60px;
+    color: #E9EFF2;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px outset #E6CC65;
+    padding: 5px;
+}
+
+.CreateQuizButton:hover{
+    background-color: #b19d50;
+    transition: .2s;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px inset #b19d50;
+    color: #c4c8ca;
+    padding-left: 9px;
+    padding-top: 4px;
 }
 
 .AnswerLabel{
@@ -146,4 +189,133 @@
 .AnswerInput:focus{
     border: 2px solid #E6CC65;
     outline: none;
+}
+
+.AddAnswerButton{
+    background-color: #537E99;
+    border: none;
+    width: 150px;
+    height: 30px;
+    color: #E9EFF2;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px outset #537E99;
+    padding: 5px;
+}
+
+.AddAnswerButton:hover{
+    background-color: #1B4863;
+    transition: .2s;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px inset #1B4863;
+    color: #c4c8ca;
+    padding-left: 9px;
+    padding-top: 4px;
+}
+
+
+.RemoveQuestionButton{
+    background-color: #E6CC65;
+    border: none;
+    width: 180px;
+    height: 30px;
+    color: #E9EFF2;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px outset #E6CC65;
+    padding: 5px;
+}
+
+.RemoveQuestionButton:hover{
+    background-color: #b19d50;
+    transition: .2s;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px inset #b19d50;
+    color: #c4c8ca;
+    padding-left: 9px;
+    padding-top: 4px;
+}
+
+.radio-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 19px;
+    margin-left: 18px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.radio-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #E9EFF2;
+    border-radius: 50%;
+}
+
+.radio-container input[type="radio"]:checked ~ .checkmark {
+    background-color: green;
+}
+
+.radio-container .checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.radio-container input[type="radio"]:checked ~ .checkmark::after {
+    display: block;
+}
+
+.radio-container .checkmark::after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.radio-container input[type="radio"]:not(:checked) ~ .checkmark::after {
+    display: block;
+    content: '✖';
+    font-size: 20px;
+    color: red;
+    left: 4.5px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    transform: none;
+}
+
+.button-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    color: #537E99; 
+    width: 40px;
+    height: auto;
+    font-weight: 600;
+    margin-left: 45px;
+}
+
+.button-icon:hover {
+    color: red;
 }

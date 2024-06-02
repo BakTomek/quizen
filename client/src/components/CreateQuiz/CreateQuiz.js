@@ -168,17 +168,17 @@ const CreateQuiz = () => {
                 value={answer.answer_text}
                 onChange={(e) => handleAnswerChange(questionIndex, answerIndex, 'answer_text', e.target.value)}
               />
-              <label>
+              <label className='radio-container'>
                 <input
                   type="radio"
                   checked={answer.is_correct}
                   onChange={() => handleCorrectAnswerChange(questionIndex, answerIndex)}
                 />
-                Correct
+                <span class="checkmark"></span>
               </label>
               {question.answers.length > 2 && (
-                <button type="button" onClick={() => removeAnswer(questionIndex, answerIndex)}>
-                  Remove Answer
+                <button className="button-icon" type="button" onClick={() => removeAnswer(questionIndex, answerIndex)}>
+                  ˂
                 </button>
               )}
             </div>
@@ -186,11 +186,11 @@ const CreateQuiz = () => {
           </div>
           <div className='EditingQuestionDiv'>
           {question.answers.length < 4 && (
-            <button type="button" onClick={() => addAnswer(questionIndex)}>
+            <button className='AddAnswerButton' type="button" onClick={() => addAnswer(questionIndex)}>
               Add Answer
             </button>
           )}
-          <button type="button" onClick={() => removeQuestion(questionIndex)}>
+          <button className='RemoveQuestionButton' type="button" onClick={() => removeQuestion(questionIndex)}>
             Remove Question
           </button>
           </div>
