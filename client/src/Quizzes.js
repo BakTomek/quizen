@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import axios from 'axios';
 import { QuizContext } from './QuizContext';
 import { useNavigate } from 'react-router-dom';
+import './Quizzes.css';
 
 const Quizzes = () => {
   const { quizzes, setQuizzes, setCurrentQuiz, setCurrentQuestionIndex, setScore } = useContext(QuizContext);
@@ -45,18 +46,24 @@ const Quizzes = () => {
   };
 
   return (
-    <div>
+    <div id='QuizzesDiv'> 
       <h1>Existing Quizzes</h1>
+      <p id='subtitle'>Press title to start trivia!</p>
+      <div id='BigQuizDiv'>
       {quizzes.map(quiz => (
-        <div key={quiz.quiz_id}>
+        <div key={quiz.quiz_id} className='quizDivGuess'>
           <div onClick={() => startQuiz(quiz)}>
             <h2>{quiz.title}</h2>
-            <p>{quiz.description}</p>
+            <p className='Desc'>{quiz.description}</p>
           </div>
-          <button onClick={() => editQuiz(quiz.quiz_id)}>Edit</button>
-          <button onClick={() => deleteQuiz(quiz.quiz_id)}>Delete</button>
+          <div className='ButtonDiv'>
+            <button onClick={() => editQuiz(quiz.quiz_id)}>Edit</button>
+            <button onClick={() => deleteQuiz(quiz.quiz_id)}>Delete</button>
+          </div>
         </div>
       ))}
+      <div className='fillerBottom'></div>
+      </div>
     </div>
   );
 };

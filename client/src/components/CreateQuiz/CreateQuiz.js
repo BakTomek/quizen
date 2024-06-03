@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import './CreateQuiz.css';
 
 const CreateQuiz = () => {
   const [title, setTitle] = useState('');
@@ -141,65 +142,70 @@ const CreateQuiz = () => {
   };
 
   return (
-    <div>
+    <div id='CreateQuizDiv'>
       <h1>{quizId ? 'Edit Quiz' : 'Create Quiz'}</h1>
       <div>
-        <label>Title</label>
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label id='titleLabel'>Title </label>: 
+        <input id='titleInput' type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
       </div>
       <div>
-        <label>Description</label>
-        <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
+        <textarea id='descArea' placeholder='Description' value={description} onChange={(e) => setDescription(e.target.value)} />
       </div>
       {questions.map((question, questionIndex) => (
         <div key={questionIndex}>
-          <label>Question</label>
-          <input
+          <label className='QuestionLabel'>Question </label>: 
+          <input className='QuestionInput'
             type="text"
             value={question.question_text}
             onChange={(e) => handleQuestionChange(questionIndex, 'question_text', e.target.value)}
           />
+          <div className='AnswersDiv'>
           {question.answers.map((answer, answerIndex) => (
             <div key={answerIndex}>
-              <label>Answer {answerIndex + 1}</label>
-              <input
+              <label className='AnswerLabel'>Answer {answerIndex + 1} </label>: 
+              <input className='AnswerInput'
                 type="text"
                 value={answer.answer_text}
                 onChange={(e) => handleAnswerChange(questionIndex, answerIndex, 'answer_text', e.target.value)}
               />
-              <label>
+              <label className='radio-container'>
                 <input
                   type="radio"
                   checked={answer.is_correct}
                   onChange={() => handleCorrectAnswerChange(questionIndex, answerIndex)}
                 />
-                Correct
+                <span class="checkmark"></span>
               </label>
               {question.answers.length > 2 && (
-                <button type="button" onClick={() => removeAnswer(questionIndex, answerIndex)}>
-                  Remove Answer
+                <button className="button-icon" type="button" onClick={() => removeAnswer(questionIndex, answerIndex)}>
+                  ˂
                 </button>
               )}
             </div>
           ))}
+          </div>
+          <div className='EditingQuestionDiv'>
           {question.answers.length < 4 && (
-            <button type="button" onClick={() => addAnswer(questionIndex)}>
+            <button className='AddAnswerButton' type="button" onClick={() => addAnswer(questionIndex)}>
               Add Answer
             </button>
           )}
-          <button type="button" onClick={() => removeQuestion(questionIndex)}>
+          <button className='RemoveQuestionButton' type="button" onClick={() => removeQuestion(questionIndex)}>
             Remove Question
           </button>
+          </div>
         </div>
       ))}
-      <button type="button" onClick={addQuestion}>
+      <button className='AddQuestionButton' type="button" onClick={addQuestion}>
         Add Question
       </button>
-      <button type="button" onClick={saveQuiz}>
+      <button className='CreateQuizButton' type="button" onClick={saveQuiz}>
         {quizId ? 'Save Changes' : 'Create Quiz'}
       </button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      <div className='fillerBottom'>sfd<br></br>asdasd<br></br>asdasd</div>
     </div>
+    
   );
 };
 
