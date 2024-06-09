@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import MainPage from '../components/MainPage/MainPage.js';
+import MainPage from '../components/MainPage/MainPage';
 import { BrowserRouter } from 'react-router-dom';
 
 test('renders main page content', () => {

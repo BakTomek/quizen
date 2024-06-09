@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Quizzes from '../Quizzes.js';
-import { QuizProvider } from '../QuizContext.js';
+import Quizzes from '../Quizzes';
+import { QuizProvider } from '../QuizContext';
 import axios from 'axios';
 
 jest.mock('axios');

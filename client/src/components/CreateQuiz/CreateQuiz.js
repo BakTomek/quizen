@@ -176,7 +176,7 @@ const CreateQuiz = () => {
                   checked={answer.is_correct}
                   onChange={() => handleCorrectAnswerChange(questionIndex, answerIndex)}
                 />
-                <span class="checkmark"></span>
+                <span className="checkmark"></span>
               </label>
               {question.answers.length > 2 && (
                 <button className="button-icon" type="button" onClick={() => removeAnswer(questionIndex, answerIndex)}>
