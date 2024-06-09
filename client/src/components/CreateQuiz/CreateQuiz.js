@@ -146,7 +146,7 @@ const CreateQuiz = () => {
       <h1>{quizId ? 'Edit Quiz' : 'Create Quiz'}</h1>
       <div>
         <label id='titleLabel'>Title </label>: 
-        <input id='titleInput' type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input id='titleInput' type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
       </div>
       <div>
         <textarea id='descArea' placeholder='Description' value={description} onChange={(e) => setDescription(e.target.value)} />
@@ -156,6 +156,7 @@ const CreateQuiz = () => {
           <label className='QuestionLabel'>Question </label>: 
           <input className='QuestionInput'
             type="text"
+            placeholder="Sample question"
             value={question.question_text}
             onChange={(e) => handleQuestionChange(questionIndex, 'question_text', e.target.value)}
           />
@@ -165,6 +166,7 @@ const CreateQuiz = () => {
               <label className='AnswerLabel'>Answer {answerIndex + 1} </label>: 
               <input className='AnswerInput'
                 type="text"
+                placeholder="Sample answer"
                 value={answer.answer_text}
                 onChange={(e) => handleAnswerChange(questionIndex, answerIndex, 'answer_text', e.target.value)}
               />

@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainPage.css';
-import arrow from './arrow.png'
-import hat from './mortarboard.png'
+import arrow from './images/arrow.png'
+import hat from './images/mortarboard.png'
 
 const MainPage = () => {
   return (
