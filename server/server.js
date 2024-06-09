@@ -9,7 +9,6 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-// Get all quizzes
 app.get('/api/quizzes', async (req, res) => {
   try {
     const quizzes = await prisma.quizzes.findMany({
@@ -27,7 +26,6 @@ app.get('/api/quizzes', async (req, res) => {
   }
 });
 
-// Get a single quiz by ID
 app.get('/api/quizzes/:id', async (req, res) => {
   const { id } = req.params;
   try {
@@ -99,7 +97,7 @@ app.put('/api/quizzes/:id', async (req, res) => {
         title,
         description,
         questions: {
-          deleteMany: {}, // delete existing questions and answers
+          deleteMany: {},
           create: questions.map(question => ({
             question_text: question.question_text,
             answers: {
