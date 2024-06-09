@@ -1,0 +1,88 @@
+#QuizDiv{
+    width: 100%;
+    height: 99%;
+    padding: 15px;
+    overflow-y: scroll;
+    background-color: #E9EFF2;
+    display: flex;
+    align-items: safe center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 300;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1%;
+    color: #02090D;
+}
+
+#QuizDiv h1{
+    color: #1B4863;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1%;
+    margin-bottom: 36px;
+}
+
+.QuizDescDiv{
+    text-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.QuestionsAndAnswersDiv{
+    margin-top: 54px;
+    display: flex;
+    justify-content: safe center;
+    align-items: safe center;
+    flex-direction: column;
+    width: auto;
+    min-width: 60%;
+}
+
+.QuestionsAndAnswersDiv h2{
+    padding-bottom: 18px;
+    margin-top: 54px;
+    border-bottom: 2px solid #537E99;
+    width: 80%;
+    text-align: center;
+}
+
+.AnswersButtonsDiv{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 70%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.AnswersButtonsDiv button{
+    background-color: #537E99;
+    border: none;
+    width: auto;
+    min-width: 60px;
+    height: auto;
+    min-height: 30px;
+    color: #E9EFF2;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px outset #537E99;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.AnswersButtonsDiv button:hover{
+    background-color: #b19d50;
+    transition: .2s;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px inset #b19d50;
+    transform: scale(1.1);
+}
