@@ -10,6 +10,7 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1",
+    "sweetalert2": "^11.11.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -23,7 +24,10 @@
       "^.+\\.jsx?$": "babel-jest"
     },
     "moduleNameMapper": {
-      "\\.(css|less)$": ["identity-obj-proxy", "<rootDir>/src/__mocks__/fileMock.js"],
+      "\\.(css|less)$": [
+        "identity-obj-proxy",
+        "<rootDir>/src/__mocks__/fileMock.js"
+      ],
       "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js"
     },
     "transformIgnorePatterns": [

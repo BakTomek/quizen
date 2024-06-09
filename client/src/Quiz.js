@@ -2,7 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { QuizContext } from './QuizContext';
 import './Quiz.css';
-import back from './background_bruh_3.png'
+import back from './background_bruh_3.png';
+import Swal from 'sweetalert2';
 
 const divStyle = {
   backgroundImage: `url(${back})`,
@@ -37,8 +38,14 @@ const Quiz = () => {
     if (currentQuestionIndex < currentQuiz.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      alert(`Quiz completed! Your score is: ${score + (isCorrect ? 1 : 0)} / ${currentQuiz.questions.length}`);
-      navigate('/');
+      Swal.fire({
+        title: 'Quiz completed!',
+        text: `Your score is: ${score + (isCorrect ? 1 : 0)} / ${currentQuiz.questions.length}`,
+        icon: 'success',
+        confirmButtonText: 'OK'
+      }).then(() => {
+        navigate('/');
+      });
     }
   };
 

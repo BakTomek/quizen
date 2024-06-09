@@ -1,6 +1,6 @@
 import React from 'react';
 import './MainPage.css';
-import arrow from './arrow.png'
+import arrow from './images/arrow.png'
 import back from './background_bruh_2.png'
 
 const divStyle = {
