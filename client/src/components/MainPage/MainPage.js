@@ -1,18 +1,25 @@
 import React from 'react';
 import './MainPage.css';
 import arrow from './arrow.png'
-import hat from './mortarboard.png'
+import back from './background_bruh_2.png'
+
+const divStyle = {
+  backgroundImage: `url(${back})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center'
+};
 
 const MainPage = () => {
   return (
-    <div id='MainPageDiv'>
+    <div id='MainPageDiv' style={divStyle}>
       <h1>Welcome to the Quiz App</h1>
       <div id='ArrowDiv'>
         <div>  
           <img id='Arrow' alt='Arrow' src={arrow}/>
           <p>Select a tab from the menu to get started. </p>
         </div>
-        <div className='fill'><img id='hat' alt='hat' src={hat} /> Learn with us!</div>
+        <div className='fill'></div>
       </div>
       <div id='BottomFill'></div>
     </div>

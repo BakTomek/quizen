@@ -3,6 +3,14 @@ import axios from 'axios';
 import { QuizContext } from './QuizContext';
 import { useNavigate } from 'react-router-dom';
 import './Quizzes.css';
+import back from './background_bruh_3.png'
+
+const divStyle = {
+  backgroundImage: `url(${back})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center'
+};
 
 const Quizzes = () => {
   const { quizzes, setQuizzes, setCurrentQuiz, setCurrentQuestionIndex, setScore } = useContext(QuizContext);
@@ -46,7 +54,7 @@ const Quizzes = () => {
   };
 
   return (
-    <div id='QuizzesDiv'> 
+    <div id='QuizzesDiv' style={divStyle}> 
       <h1>Existing Quizzes</h1>
       <p id='subtitle'>Press title to start trivia!</p>
       <div id='BigQuizDiv'>

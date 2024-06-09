@@ -1,6 +1,15 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { QuizContext } from './QuizContext';
+import './Quiz.css';
+import back from './background_bruh_3.png'
+
+const divStyle = {
+  backgroundImage: `url(${back})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center'
+};
 
 const Quiz = () => {
   const { quizId } = useParams();
@@ -34,16 +43,18 @@ const Quiz = () => {
   };
 
   return (
-    <div>
+    <div id='QuizDiv' style={divStyle}>
       <h1>{currentQuiz.title}</h1>
-      <p>{currentQuiz.description}</p>
-      <div>
+      <p className='QuizDescDiv'>{currentQuiz.description}</p>
+      <div className='QuestionsAndAnswersDiv'>
         <h2>{currentQuestion.question_text}</h2>
-        {currentQuestion.answers.map((answer, index) => (
-          <button key={index} onClick={() => handleAnswerClick(answer.is_correct)}>
-            {answer.answer_text}
-          </button>
-        ))}
+        <div className='AnswersButtonsDiv'>
+          {currentQuestion.answers.map((answer, index) => (
+            <button key={index} onClick={() => handleAnswerClick(answer.is_correct)}>
+              {answer.answer_text}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

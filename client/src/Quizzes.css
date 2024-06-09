@@ -52,6 +52,10 @@
     font-size: 26px;
 }
 
+.quizDivGuess:hover{
+    cursor: pointer;
+}
+
 .ButtonDiv{
     display: flex;
     align-items: center;
@@ -74,12 +78,12 @@
 
 .ButtonDiv button:hover{
     background-color: #b19d50;
-    transition: .2s;
+    transition: .1s;
     cursor: pointer;
     font-weight: 600;
     border: 2px inset #b19d50;
     color: #c4c8ca;
-    padding-left: 9px;
+    padding-left: 10px;
     padding-top: 4px;
 }
 

@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import './CreateQuiz.css';
+import back from './background_bruh_4.png'
+
+const divStyle = {
+  backgroundImage: `url(${back})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center'
+};
 
 const CreateQuiz = () => {
   const [title, setTitle] = useState('');
@@ -142,7 +150,7 @@ const CreateQuiz = () => {
   };
 
   return (
-    <div id='CreateQuizDiv'>
+    <div id='CreateQuizDiv' style={divStyle}>
       <h1>{quizId ? 'Edit Quiz' : 'Create Quiz'}</h1>
       <div>
         <label id='titleLabel'>Title </label>: 
