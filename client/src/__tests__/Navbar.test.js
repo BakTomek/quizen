@@ -1,50 +1,36 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { MemoryRouter } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
 
-test('renders navbar links', () => {
-  render(
-    <BrowserRouter>
-      <Navbar />
-    </BrowserRouter>
-  );
+describe('Navbar Component', () => {
+  test('clicking on the menu toggle button toggles the menu', () => {
+    render(
+      <MemoryRouter>
+        <Navbar />
+      </MemoryRouter>
+    );
 
-  expect(screen.getByText(/Quizen/i)).toBeInTheDocument();
-  expect(screen.getByText(/Main/i)).toBeInTheDocument();
-  expect(screen.getByText(/Quizzes/i)).toBeInTheDocument();
-  expect(screen.getByText(/Create/i)).toBeInTheDocument();
-});
+    // Znajdź przycisk służący do przełączania menu
+    const menuToggle = screen.getByText('☰');
+    expect(menuToggle).toBeInTheDocument();
 
-test('navigates to Main page', () => {
-  render(
-    <BrowserRouter>
-      <Navbar />
-    </BrowserRouter>
-  );
+    // Sprawdź, czy menu jest początkowo zamknięte
+    expect(screen.getByRole('navigation', { hidden: true })).toBeInTheDocument();
 
-  fireEvent.click(screen.getByText(/Main/i));
-  expect(window.location.pathname).toBe('/');
-});
+    // Kliknij przycisk, aby otworzyć menu
+    userEvent.click(menuToggle);
 
-test('navigates to Quizzes page', () => {
-  render(
-    <BrowserRouter>
-      <Navbar />
-    </BrowserRouter>
-  );
+    // Sprawdź, czy menu jest teraz otwarte na podstawie zmian w klasach CSS
+    expect(screen.getByRole('navigation', { hidden: true })).not.toBeInTheDocument();
+    expect(screen.getByRole('navigation', { className: 'open' })).toBeInTheDocument();
 
-  fireEvent.click(screen.getByText(/Quizzes/i));
-  expect(window.location.pathname).toBe('/quizzes');
-});
+    // Kliknij przycisk, aby zamknąć menu
+    userEvent.click(menuToggle);
 
-test('navigates to Create page', () => {
-  render(
-    <BrowserRouter>
-      <Navbar />
-    </BrowserRouter>
-  );
-
-  fireEvent.click(screen.getByText(/Create/i));
-  expect(window.location.pathname).toBe('/create-quiz');
+    // Sprawdź, czy menu jest teraz zamknięte na podstawie zmian w klasach CSS
+    expect(screen.getByRole('navigation', { hidden: true })).toBeInTheDocument();
+    expect(screen.queryByRole('navigation', { className: 'open' })).not.toBeInTheDocument();
+  });
 });

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App App component matches snapshot for / route 1`] = `
+<DocumentFragment>
+  <div>
+    Mock Navbar
+  </div>
+  <div>
+    Mock Main Page
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App App component matches snapshot for /create-quiz route 1`] = `
+<DocumentFragment>
+  <div>
+    Mock Navbar
+  </div>
+  <div>
+    Mock Create Quiz
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App App component matches snapshot for /quiz/:quizId route 1`] = `
+<DocumentFragment>
+  <div>
+    Mock Navbar
+  </div>
+  <div>
+    Mock Quiz
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App App component matches snapshot for /quizzes route 1`] = `
+<DocumentFragment>
+  <div>
+    Mock Navbar
+  </div>
+  <div>
+    Mock Quizzes
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App App component matches snapshot for unknown route 1`] = `
+<DocumentFragment>
+  <div>
+    Mock Navbar
+  </div>
+</DocumentFragment>
+`;

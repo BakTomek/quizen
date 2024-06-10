@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="MainPageDiv"
+    style="background-image: url(); background-size: cover; background-repeat: no-repeat; background-position: center;"
+  >
+    <h1>
+      Welcome to the Quiz App
+    </h1>
+    <div
+      id="ArrowDiv"
+    >
+      <div>
+        <img
+          alt="Arrow"
+          id="Arrow"
+          src=""
+        />
+        <p>
+          Select a tab from the menu to get started. 
+        </p>
+      </div>
+      <div
+        class="fill"
+      />
+    </div>
+    <div
+      id="BottomFill"
+    />
+  </div>
+</DocumentFragment>
+`;
