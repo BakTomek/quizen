@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import MainPage from './components/MainPage/MainPage';
-import Quizzes from './Quizzes';
+import Quizzes from './components/Quizzes/Quizzes';
 import CreateQuiz from './components/CreateQuiz/CreateQuiz';
-import Quiz from './Quiz';
-import { QuizProvider } from './QuizContext';
+import Quiz from './components/Quiz/Quiz';
+import { QuizProvider } from './components/Quiz/QuizContext';
 import './App.css';
 
 const App = () => {

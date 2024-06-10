@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from 'react';
 import axios from 'axios';
-import { QuizContext } from './QuizContext';
+import { QuizContext } from '../Quiz/QuizContext';
 import { useNavigate } from 'react-router-dom';
 import './Quizzes.css';
-import back from './background_bruh_3.png'
+import back from '../../background_bruh_3.png'
 
 const divStyle = {
   backgroundImage: `url(${back})`,

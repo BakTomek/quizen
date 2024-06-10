@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { QuizContext } from './QuizContext';
 import './Quiz.css';
-import back from './background_bruh_3.png';
+import back from '../../background_bruh_3.png';
 import Swal from 'sweetalert2';
 
 const divStyle = {
